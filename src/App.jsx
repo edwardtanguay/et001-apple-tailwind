@@ -1,5 +1,4 @@
 import Router from "./components/Router";
-
 import Navbar from "./components/Navbar";
 import { useState } from "react";
 import { AppContext } from "./components/Context";
@@ -12,9 +11,6 @@ const App = () => {
         value={{
           filter,
           setFilter, 
-
-          
-          
         }}
       >
         <Navbar />
