@@ -1,13 +1,12 @@
 import { useContext } from "react";
-import { getProductsItem } from "../data";
+import productItems from '../../data/productItems.json';
 import { AppContext } from "../Context";
 
 const Card = () => {
-  const productsItems = getProductsItem();
   const {filter}=useContext(AppContext)
   return (
     <div className="flex flex-wrap justify-around gap-5 bg-slate-400 py-12">
-      {productsItems.filter((item)=>(
+      {productItems.filter((item)=>(
         item.name.toLowerCase().includes(filter.toLowerCase())
       ))
      .map((item) => (
